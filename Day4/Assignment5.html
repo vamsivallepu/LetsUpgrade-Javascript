@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5</title>
+</head>
+<body>
+    <script>
+        let inp=prompt('Enter total sales :')
+        if (inp>0 && inp<=5000){
+            console.log(`Commission earned = ${inp/100*2}`)
+        }else if (inp>5000 && inp<=10000){
+            console.log(`Commission earned = ${inp/100*5}`)  
+        }else if(inp>10000 && inp<=20000){
+            console.log(`Commission earned = ${inp/100*7}`)
+        }else{
+            console.log(`Commission Earned = ${inp/100*10}`)
+        }
+    </script>
+</body>
+</html>

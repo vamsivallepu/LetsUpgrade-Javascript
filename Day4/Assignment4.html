@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body>
+    <!--Basic Calculator-->
+    <script>
+        console.log('1.Addition 2.Subraction 3.Multiplication 4.Division 5.Square Root 6.Percentage')
+        let option=prompt('Enter your option :')
+        switch(option){
+            case '1':
+            let num=prompt('enter numbers to add seperated by space :');
+            console.log(num.split(' ').reduce((a,b)=>Number(a)+Number(b)));
+            break;
+            case '2':
+            let sub=prompt('enter numbers to subtract seperated by space :')
+            console.log(sub.split(' ').reduce((a,b)=>Number(a)-Number(b)))
+            break;
+            case '3':
+            let mul=prompt('enter numbers to multiply seperated by space :')
+            console.log(mul.split(' ').reduce((a,b)=>Number(a)*Number(b)))
+            break;
+            case '4':      
+            let div=prompt('enter numbers to divide sepearated by space :')
+            console.log(div.split(' ').reduce((a,b)=>Number(a)/Number(b)))
+            break;
+            case '5':
+            let sr=prompt('enter a number to find Square root :')
+            console.log(Math.sqrt(sr))
+            break;
+            case '6':
+            let per=prompt('enter numbers to find percentage seperated by space :')
+            ar=per.split(' ')
+            console.log((ar[0]/ar[1])*100)
+            break;
+        }
+    </script>
+</body>
+</html>
