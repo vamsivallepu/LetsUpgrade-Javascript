@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name,age,email){
+                this.name=name
+                this.age=age
+                this.email=email
+                this.coins=0
+                this.courses=[]
+            }
+            login(){
+                console.log(`${this.name} has logged in`)
+            }
+            logout(){
+                console.log(`${this.name} has logged out`)
+            }
+        }
+        class Moderator extends User{
+            addCoins(user,coins){
+                user.coins+=coins;
+            }
+            removeCoins(user,coins){
+                user.coins-=coins;
+            }
+        }
+        class Admin extends Moderator{
+            addCourse(user,course){
+                user.courses.push(course);
+            }
+            removeCourse(user,course){
+                let arr=user.courses
+                delete arr[arr.indexOf(course)]
+            }
+        }
+        let vamsi= new User('vamsi',18,'v@gmail.com')
+        let krishna= new Moderator('krishan',24,'k@gmail.com')
+        let vallepu=new Admin('vallepu',36,'c@gmail.com')
+        krishna.addCoins(vamsi,5)
+        krishna.removeCoins(vamsi,3)
+        vallepu.addCourse(vamsi,'python')
+        vallepu.removeCourse(vamsi,'python')
+        console.log(vamsi)
+    </script>
+</body>
+</html>
